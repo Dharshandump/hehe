@@ -8,7 +8,7 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Santhosh Rahul',
+    default: 'Sondi Dharshan',
     template: '%s | Freelance Web Developer ',
   },
   description:
