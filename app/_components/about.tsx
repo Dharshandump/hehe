@@ -24,7 +24,6 @@ export function About() {
   <p className='text-pretty'>
     I'm always exploring new ideas — whether it's experimenting with <span className="text-secondary font-medium">AI tools</span>, contributing to projects, or helping a vision come to life. <span className="gradient-text font-semibold">Let's build something impactful together.</span>
   </p>
-</div>
       <ViewResumeButton />
     </section>
   );
