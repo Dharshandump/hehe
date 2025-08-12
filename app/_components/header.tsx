@@ -24,11 +24,11 @@ export function Header() {
       <div>
 
         <h1 className={`${orchestration[0]} animate-fade-in text-4xl font-bold tracking-tight text-primary dark:text-slate-200 sm:text-5xl`}>
-          <a href="/">Santhosh Rahul</a>
+          <a href="/" className="gradient-text hover:glow-purple transition-all duration-300">Santhosh Rahul</a>
         </h1>
         <div className='flex items-center gap-3'>
           <h2 className={`${orchestration[1]} animate-fade-in mt-3 text-lg font-medium tracking-tight text-secondary sm:text-xl flex gap-6`}>
-          An aspiring Software Engineer 
+          <span className="text-primary">An aspiring Software Engineer</span>
             <a href="https://linktr.ee/rahull.in" target="_blank" rel="noopener noreferrer">
           <Image
             src={LinkTree}
@@ -39,17 +39,17 @@ export function Header() {
         </a>
           </h2>
         </div>
-        <h2 className='mt-2 font-semibold'>#open_to_work</h2>
-        <p className={`${orchestration[2]} animate-fade-in text-sm mt-4 max-w-xs leading-normal text-slate-400`}>
-        Crafting seamless digital experiences with code, creativity, and purpose.
+        <h2 className='mt-2 font-semibold text-secondary'>#open_to_work</h2>
+        <p className={`${orchestration[2]} animate-fade-in text-sm mt-4 max-w-xs leading-normal text-secondary`}>
+        <span className="text-primary">Crafting seamless digital experiences</span> with code, creativity, and purpose.
         </p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
             {LINKS.map((link, i) => (
               <li key={link.href} className={`animate-fade-in slide-in-from-right slide-in-from-bottom ${duration[i]} ease-out`}>
                 <a className="group flex items-center py-3" href={link.href}>
-                  <span className="nav-indicator mr-4 h-px w-8 bg-secondary dark:group-hover:bg-slate-200 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none" />
-                  <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 dark:group-hover:text-slate-200 group-hover:text-secondary group-focus-visible:text-slate-200">
+                  <span className="nav-indicator mr-4 h-px w-8 bg-secondary transition-all group-hover:w-16 group-hover:glow-cyan group-focus-visible:w-16 motion-reduce:transition-none" />
+                  <span className="nav-text text-xs font-bold uppercase tracking-widest text-secondary group-hover:text-secondary group-hover:glow-cyan group-focus-visible:text-secondary transition-all duration-300">
                     {link.label}
                   </span>
                 </a>

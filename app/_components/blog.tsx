@@ -36,11 +36,12 @@ export function Blog() {
               <li key={i} className="mb-12">
                 <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 md:px-2">
                   <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-emerald-800/10 dark:lg:group-hover:bg-emerald-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
+                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card lg:group-hover:glow-purple lg:group-hover:shadow-[inset_0_1px_0_0_rgba(138,43,226,0.1)] lg:group-hover:drop-shadow-lg" />
                   <div className="z-10 sm:order-2 col-span-8 sm:col-span-5 md:col-span-6">
                     <h3>
                       {experiment.url ? (
                         <a
-                          className="inline-flex items-baseline font-medium leading-tight text-accent dark:hover:text-teal-300 dark:focus-visible:text-teal-300 group/link text-base"
+                          className="inline-flex items-baseline font-medium leading-tight gradient-text hover:glow-cyan focus-visible:text-secondary group/link text-base transition-all duration-300"
                           href={experiment.url}
                           target="_blank"
                           rel="noreferrer noopener"
@@ -58,7 +59,7 @@ export function Blog() {
                         <Popover>
                           <PopoverTrigger>
                             <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-                            <p className='text-accent dark:hover:text-teal-300 dark:focus-visible:text-teal-300 text-left'>
+                            <p className='gradient-text hover:glow-cyan focus-visible:text-secondary text-left transition-all duration-300'>
                               {experiment.title}{" "}
                             </p>
                           </PopoverTrigger>
@@ -70,7 +71,7 @@ export function Blog() {
                         </Popover>
                       )}
                     </h3>
-                    <p className="mt-2 text-xs leading-normal">
+                    <p className="mt-2 text-xs leading-normal text-secondary">
                       {experiment.description}
                     </p>
                   </div>

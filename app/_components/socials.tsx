@@ -95,9 +95,9 @@ export function Socials() {
   return (
     <ul className="ml-1 flex items-center gap-x-2" aria-label="Social media">
       {SOCIALS.map((social) => (
-        <li key={social.title} className="text-xs text-accent shrink-0 hover:-translate-y-3 transition-transform ease-cubic fill-mode-both rounded-md hover:shadow-md px-2 py-1">
+        <li key={social.title} className="text-xs text-secondary shrink-0 hover:-translate-y-3 transition-all duration-300 ease-cubic fill-mode-both rounded-md hover:glow-cyan px-2 py-1">
           <a
-            className="block hover:text-slate-200"
+            className="block hover:text-secondary transition-colors duration-300"
             href={social.href}
             target="_blank"
             rel="noreferrer noopener"

@@ -19,15 +19,16 @@ export function Experience() {
             <li key={job.id} className="mb-12">
               <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-emerald-800/5 dark:lg:group-hover:bg-emerald-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
+                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card lg:group-hover:glow-purple lg:group-hover:shadow-[inset_0_1px_0_0_rgba(138,43,226,0.1)] lg:group-hover:drop-shadow-lg" />
                 <header
-                  className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+                  className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-secondary sm:col-span-2"
                   aria-label={job.date}
                 >
                   {job.date}
                 </header>
                 <div className="z-10 sm:col-span-6">
-                  <h3 className="font-medium leading-snug text-slate-200">
-                    <div className='text-accent dark:hover:text-teal-300 dark:focus-visible:text-teal-300 group/link'>
+                  <h3 className="font-medium leading-snug text-primary">
+                    <div className='gradient-text hover:glow-cyan dark:focus-visible:text-secondary group/link transition-all duration-300'>
                       <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block group/link" />
                       <span>
                         {job.title} ·{" "}
@@ -37,7 +38,7 @@ export function Experience() {
                       </span>
                     </div>
                   </h3>
-                  <p className="mt-2 text-sm text-slate-500 hover:text-white leading-normal">
+                  <p className="mt-2 text-sm text-secondary hover:text-primary leading-normal transition-colors duration-300">
                     {job.description}
                   </p>
                   <ul
@@ -46,7 +47,7 @@ export function Experience() {
                   >
                     {job.technologies?.length ? job.technologies.map((technology, idx) => (
                       <li key={`${technology}-${idx}`} className="mr-1.5 mt-2">
-                        <div className="flex items-center rounded-full bg-blue-400/40 dark:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-800 dark:text-blue-300 ">
+                        <div className="flex items-center rounded-full bg-secondary/20 px-3 py-1 text-xs font-medium leading-5 text-secondary hover:bg-secondary/30 hover:glow-cyan transition-all duration-300">
                           {technology}
                         </div>
                       </li>
@@ -68,7 +69,7 @@ export function Experience() {
                       {job.relatedLinks.map((link) => (
                         <li key={link.url} className="mr-4">
                           <a
-                            className="relative mt-2 inline-flex items-center text-sm font-medium text-slate-600 dark:text-slate-300 dark:hover:text-teal-300 dark:focus-visible:text-teal-300"
+                            className="relative mt-2 inline-flex items-center text-sm font-medium text-secondary hover:text-secondary hover:glow-cyan focus-visible:text-secondary transition-all duration-300"
                             href={link.url}
                             target="_blank"
                             rel="noreferrer noopener"
