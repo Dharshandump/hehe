@@ -1,9 +1,9 @@
 
 export function ViewResumeButton() {
   return (
-    <div className="mt-12 w-fit p-2 rounded-lg border border-accent bg-accent/10 hover:bg-accent/20 hover:glow-purple transition-all duration-300">
+    <div className="mt-12 w-fit p-2 rounded-lg border border-primary bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 hover:glow-purple card-hover transition-all duration-300">
       <a
-        className="inline-flex items-baseline leading-tight hover:text-accent focus-visible:text-accent font-semibold text-accent group/link text-base transition-colors duration-300"
+        className="inline-flex items-baseline leading-tight gradient-text hover:glow-pink focus-visible:glow-pink font-semibold group/link text-base transition-all duration-300"
         href="https://drive.google.com/file/d/1to0RpJds-AEk42TG6Qg6vr5MdIB7YVIZ/view?usp=drivesdk"
         target="_blank"
         rel="noreferrer noopener"
