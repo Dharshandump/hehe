@@ -1,31 +1,11 @@
-import ToastCenter from '@/components/toast-center';
+const KEYWORDS = [
+  'React.js', 'React Native', 'Typescript', 'Javascript',
+  'Node.js', 'Express.js', 'Next.js', 'Python', 'C++',
+  'REST APIs', 'TailwindCss', 'SQL', 'Firebase', 'MongoDB',
+  'Gemini API', 'GIT', 'HTML5', 'CSS3'
+];
 
-import { About } from './_components/about';
-import { Blog } from './_components/blog';
-import { Experience } from './_components/experience';
-import { Experiments } from './_components/experiments';
-import { Footer } from './_components/footer';
-import { Header } from './_components/header';
-import { KeywordScroll } from './_components/keyword-scroll';
-import { SkipToContentLink } from './_components/skip-link';
-import { Wrapper } from './_components/wrapper';
-
-export default function LandingPage() {
+export function Skills() {
   return (
-    <Wrapper>
-      <SkipToContentLink />
-      <div className="relative lg:flex lg:justify-between lg:gap-4">
-        <Header />
-        <div id="content" className="pt-24 lg:w-1/2 lg:py-24">
-          <About />
-          <KeywordScroll />
-          <Experience />
-          <Experiments />
-          <Blog />
-          <Footer />
-        </div>
-      </div>
-      <ToastCenter />
-    </Wrapper>
-  );
-}
+    <div className="my-16 overflow-hidden w-full">
+      <h2 className="text-2xl font-bold uppercase pb-4 gradient-text">Skills</h2>

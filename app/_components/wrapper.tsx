@@ -1,47 +1,41 @@
-"use client";
+const KEYWORDS = [
+  'React.js', 'React Native', 'Typescript', 'Javascript',
+  'Node.js', 'Express.js', 'Next.js', 'Python', 'C++',
+  'REST APIs', 'TailwindCss', 'SQL', 'Firebase', 'MongoDB',
+  'Gemini API', 'GIT', 'HTML5', 'CSS3'
+];
 
-import {
-  useEffect,
-  useRef,
-} from 'react';
-
-export function Wrapper({ children }: { children: React.ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const updateMousePosition = (ev: MouseEvent) => {
-      if (!ref.current) return;
-      const { clientX, clientY } = ev;
-      ref.current.style.setProperty("--x", `${clientX}px`);
-      ref.current.style.setProperty("--y", `${clientY}px`);
-    };
-
-    window.addEventListener("mousemove", updateMousePosition);
-
-    return () => {
-      window.removeEventListener("mousemove", updateMousePosition);
-    };
-  }, []);
+export function KeywordScroll() {
   return (
-    <div ref={ref} className="relative mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
-      {/* Animated Background */}
-      <div className="animated-bg">
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-      </div>
-      
-      {/* Interactive cursor effect */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(circle 600px at var(--x, 50%) var(--y, 50%), rgba(179, 71, 217, 0.08), transparent 40%)`
-        }}
-      />
+    <div className="my-16 overflow-hidden w-full">
+      <h2 className="text-2xl font-bold uppercase pb-4 gradient-text">Skills</h2>
 
-      {children}
-    </div >
-  );
+      <div className="flex flex-wrap gap-4 text-xl">
+        {KEYWORDS.map((keyword, i) => (
+          <span
+            key={i}
+            className="px-4 py-2 rounded-lg border border-secondary/20 bg-card backdrop-blur-md shadow-md text-primary transition-all duration-300 hover:-translate-y-1 hover:glow-cyan hover:border-secondary/40"
+          >
+            {keyword}
+          </span>
+        ))}
+      </div>
+    </div>
+      {/* Animated Background with Geometric Shapes */}
+  // Generate particles
+        <div className="floating-shape"></div>
+        <div className="floating-shape"></div>
+        <div className="floating-shape"></div>
+        <div className="floating-shape"></div>
+        <div className="floating-shape"></div>
+        <div className="floating-shape"></div>
+        {particles}
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 15}s`,
+        animationDuration: `${15 + Math.random() * 10}s`
+      }}
+    />
+          background: `radial-gradient(circle 800px at var(--x, 50%) var(--y, 50%), rgba(179, 71, 217, 0.1), rgba(255, 102, 204, 0.05) 50%, transparent 70%)`
+
 }
