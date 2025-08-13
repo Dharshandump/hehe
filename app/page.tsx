@@ -5,7 +5,10 @@ const KEYWORDS = [
   'Gemini API', 'GIT', 'HTML5', 'CSS3'
 ];
 
-export function Skills() {
+export function KeywordScroll() {
   return (
     <div className="my-16 overflow-hidden w-full">
       <h2 className="text-2xl font-bold uppercase pb-4 gradient-text">Skills</h2>
+
+  )
+}
