@@ -1,23 +1,14 @@
-import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
+const KEYWORDS = [
+  'React.js', 'React Native', 'Typescript', 'Javascript',
+  'Node.js', 'Express.js', 'Next.js', 'Python', 'C++',
+  'REST APIs', 'TailwindCss', 'SQL', 'Firebase', 'MongoDB',
+  'Gemini API', 'GIT', 'HTML5', 'CSS3'
+];
 
-export function ViewResumeButton() {
+export function KeywordScroll() {
   return (
-    <div className="mt-8">
-      <Button
-        asChild
-        className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent text-black font-semibold px-6 py-3 rounded-lg hover:glow-purple transition-all duration-300 hover:-translate-y-1"
-      >
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2"
-        >
-          <Download size={18} />
-          View Resume
-        </a>
-      </Button>
-    </div>
-  );
+    <div className="my-16 overflow-hidden w-full">
+      <h2 className="text-2xl font-bold uppercase pb-4 gradient-text">Skills</h2>
+
+  )
 }
